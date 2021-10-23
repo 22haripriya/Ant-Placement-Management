@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 21 Oct, 2021 3:53:45 PM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="companyPack.Student" table="STUDENT">
+        <id name="studId" type="int">
+            <column name="STUDID" />
+            <generator class="increment" />
+        </id>
+        <property name="studName" type="java.lang.String">
+            <column name="STUDNAME" />
+        </property>
+        <property name="studCourse" type="java.lang.String">
+            <column name="STUDCOURSE" />
+        </property>
+
+        <property name="studEmail" type="java.lang.String">
+            <column name="STUDEMAIL" />
+        </property>
+        <property name="studPassword" type="java.lang.String">
+            <column name="STUDPASSWORD" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -27,10 +27,10 @@ margin-top:100px;
 </head>
 <body>
 <%@page import="companyController.CompanyDao"%>
-<jsp:useBean id="obj" class="companyPack.Company"></jsp:useBean>
-<jsp:setProperty name="obj" property="*"/>
+<jsp:useBean id="obj2" class="companyPack.Company"></jsp:useBean>
+<jsp:setProperty name="obj2" property="*"/>
 <%
-int i=CompanyDao.addDetails(obj);
+int i=CompanyDao.addDetails(obj2);
 if(i>0)
 out.print("Successfully Registered!!!");
 %>

@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Registered!!!</title>
+<title>Student Details</title>
 <style>
 body{
 background-image:url('file:///G:/edubridge/JavaProgram/Company/company.jpg');
@@ -26,15 +26,13 @@ margin-top:100px;
 </style>
 </head>
 <body>
-<%@page import="companyController.CompanyDao"%>
-<jsp:useBean id="obj1" class="companyPack.Company"></jsp:useBean>
-<jsp:setProperty name="obj1" property="*"/>
+<%@page import="companyController.StudSQL"%>
 <%
-int i=CompanyDao.addDetails(obj1);
-if(i>0)
-out.print("Successfully Registered!!!");
+String s = StudSQL.RetriveRecord();
+
+out.println(s);
 %>
-<form name="myform" method="post" action="http://localhost:8080/Company/Companyhome.jsp">
+<form name="myform" method="post" action="http://localhost:8080/Company/placement.jsp">
 <input class="b1" type="submit" value="Okay">
 </form>
 </body>

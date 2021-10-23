@@ -4,16 +4,17 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Registered!!!</title>
+<title>Student Registration</title>
+
 <style>
 body{
-background-image:url('file:///G:/edubridge/JavaProgram/Company/company.jpg');
+background-image:url('file:///G:/edubridge/JavaProgram/Company/student.jpg');
 background-repeat: no-repeat;
 background-attachment:fixed;
 background-size: cover;
 color:black;
-font-size:50px;
-margin-left:200px;
+font-size:20px;
+margin-left:400px;
 margin-top:100px;
 }
 .b1{
@@ -22,20 +23,15 @@ margin-top:100px;
 				border-radius : 7px;
 				color: white;
 		}
-
 </style>
 </head>
 <body>
-<%@page import="companyController.CompanyDao"%>
-<jsp:useBean id="obj1" class="companyPack.Company"></jsp:useBean>
-<jsp:setProperty name="obj1" property="*"/>
-<%
-int i=CompanyDao.addDetails(obj1);
-if(i>0)
-out.print("Successfully Registered!!!");
-%>
-<form name="myform" method="post" action="http://localhost:8080/Company/Companyhome.jsp">
-<input class="b1" type="submit" value="Okay">
+<form action="AdminStudent.jsp" method="post">
+Student Name : <input type="text" name="studName"><br><br>
+Student Course : <input type="text" name="studCourse"><br><br>
+E-mail : <input type="email" name="studEmail"><br><br>
+Password : <input type="password" name="studPassword"><br><br>
+<input class="b1" type="submit" value="Add"/>
 </form>
 </body>
 </html>

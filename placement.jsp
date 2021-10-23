@@ -51,8 +51,10 @@ font-size: 100px;
 <ul>
 <li><a class="active" href="http://localhost:8080/Company/placement.jsp">Home</a></li>
 <li class="b1"><a href="http://localhost:8080/Company/LoginOrReg.jsp">Logout</a></li>
-<li><a href="http://localhost:8080/Company/adminCompany.jsp">Add Company</a></li>
-<li><a href="http://localhost:8080/Company/AdminStudent.jsp">Add Student</a></li>
+<li><a href="http://localhost:8080/Company/Company1.jsp">Add Company</a></li>
+<li><a href="http://localhost:8080/Company/Student1.jsp">Add Student</a></li>
+<li><a href="compretrieve.jsp">View Company</a></li>
+<li><a href="Studretrieve.jsp">View Student</a></li>
 </ul><br><br>
 <marquee>Welcome to Admin Portal!!!</marquee>
 </body>
