@@ -26,7 +26,30 @@ margin-top:100px;
 </style>
 </head>
 <body>
-<form action="addStudent.jsp" method="post">
+<script>
+function validateregister(){
+var studName=document.myform.studName.value;
+var studCourse=document.myform.studCourse.value;
+var studEmail=document.myform.studEmail.value;
+var studPassword=document.myform.studPassword.value;
+
+if(studName==null|| studName==""){
+alert("Student Name can't be blank");
+return false;
+}else if(studCourse == null || studCourse == ""){
+alert("Student Course can't be blank");
+return false;
+}
+else if(studEmail == null || studEmail == ""){
+alert("Student Email Cannot be null");
+return false;
+}else if(studPassword.length < 6){
+alert("Student Password must be atleast 6 letters.");
+return false;
+}
+}
+</script>
+<form  name="myform" onsubmit="return validateregister()" action="addStudent.jsp" method="post">
 Student Name : <input type="text" name="studName"><br><br>
 Student Course : <input type="text" name="studCourse"><br><br>
 E-mail : <input type="email" name="studEmail"><br><br>

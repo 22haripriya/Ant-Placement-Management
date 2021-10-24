@@ -25,7 +25,22 @@ margin-top:100px;
 </style>
 </head>
 <body>
-<form action="http://localhost:8080/Company/Studenthome.jsp" method="post">
+<script>
+function validateregister(){
+
+var studEmail=document.myform.studEmail.value;
+var studPassword=document.myform.studPassword.value;
+
+if(studEmail == null || studEmail == ""){
+alert("Student Email Cannot be null");
+return false;
+}else if(studPassword.length < 6){
+alert("Student Password must be atleast 6 letters.");
+return false;
+}
+}
+</script>
+<form name="myform" onsubmit="return validateregister()" action="http://localhost:8080/Company/Studenthome.jsp" method="post">
 E-mail : <input type="email" name="studEmail"><br><br>
 Password : <input type="password" name="studPassword"><br><br>
 <input class="b1" type="submit" value="Login"/>

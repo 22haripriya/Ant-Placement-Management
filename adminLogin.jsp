@@ -25,7 +25,21 @@ margin-top:100px;
 	</style>
 </head>
 <body>
-<form action="http://localhost:8080/Company/placement.jsp" method="post">
+<script>
+function validateregister(){
+var adminName=document.myform.adminName.value;
+var adminPassword=document.myform.adminPassword.value;
+
+if(adminName==null|| adminName==""){
+alert("Admin Name can't be blank");
+return false;
+}else if(adminPassword.length < 6){
+alert("Admin Password must be atleast 6 letters.");
+return false;
+}
+}
+</script>
+<form name="myform" onsubmit="return validateregister()" action="http://localhost:8080/Company/placement.jsp" method="post">
 Admin Name : <input type="text" name="adminName"><br><br>
 Admin Password : <input type="password" name="adminPassword"><br><br>
 <input class="b1" type="submit" value="Login"/>

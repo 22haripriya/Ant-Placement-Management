@@ -26,10 +26,13 @@ margin-top:100px;
 </head>
 <script>
 function validateregister(){
-var name=document.myform.name.value;
-var password=document.myform.password.value;
-var phonenumber=document.myform.phonenumber.value;
-var address=document.myform.address.value;
+
+		var compName=document.myform.compName.value;
+		var compPosition=document.myform.compPosition.value;
+		var compPackage=document.myform.compPackage.value;
+		var noOfposition=document.myform.noOfposition.value;
+		var Experience=document.myform.Experience.value;
+	
 if(compName==null|| compName==""){
 alert("Company Name can't be blank");
 return false;
@@ -49,15 +52,10 @@ else if(Experience == null || Experience == "")
 	alert("Experience cannot be null.");
 	return false;
 	}
-localStorage.setItem("compname",compName);
-localStorage.setItem("compPosition",compPosition);
-localStorage.setItem("compPackage",comPackage);
-localStorage.setItem("compPosition",noOfPosition);
-localStorage.setItem("experience",Experience);
 }
 </script>
 <body>
-<form  method="post" action="adminCompany.jsp">
+<form name="myform" method="post" onsubmit="return validateregister()" action="adminCompany.jsp">
 Company Name : <input type="text" name="compName"><br><br>
 Company Position : <input type="text" name="compPosition"><br><br>
 Package Per Annum : <input type="text" name="compPackage"><br><br>
