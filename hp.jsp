@@ -12,7 +12,6 @@ background-repeat: no-repeat;
 background-attachment:fixed;
 background-size: cover;
 font-size:20px;
-
 }
 .b1{
 			background-color:black;
